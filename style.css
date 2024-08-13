@@ -1,0 +1,148 @@
+*{
+    margin:0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    background-color: #010101;
+    color: #e6e6e6;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-family: 'outfit', sans-serif;
+    padding-top: 4rem;
+    gap: 1rem;
+}
+
+.my-logo{
+    width: 10rem;
+    border-radius: 50%;
+    aspect-ratio: 1/1;
+    object-fit: cover;
+    object-position: top;
+}
+
+a{
+    text-decoration: none;
+    color: inherit;
+}
+
+.sosmed i{
+    font-size: 1.5rem;
+    color: #9e9ea0;
+}
+
+.sosmed i:hover{
+    color: #e6e6e6;
+}
+
+.sosmed a:not(:last-child){
+    margin-right: 0.6rem;
+}
+
+.sosmed{
+    margin-top: 1rem;
+}
+
+ul{
+    width: 80%;
+    max-width: 40rem;
+}
+
+ul li{
+    list-style: none;
+
+}
+
+ul.link-card-sosmed li:not(:last-child) {
+    margin-bottom: 1rem;
+    margin-top: 1rem;
+}
+
+.link-card{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #010101;
+    padding: 0.8rem;
+    border-style: dashed;
+    border-width: 1px;
+    border-color: #565656;
+    margin-bottom: 1.5rem;
+}
+
+.link-card:hover {
+    border: 1px solid #9e9ea0;
+}
+
+.link-text {
+    color: #e6e6e6;
+}
+
+.link-card-sosmed .link-icon{
+    background-image: linear-gradient(to top, #767676, black,#767676);
+    padding: 0.5rem;
+    border-radius: 8px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.link-card-sosmed .link-icon i {
+    color: #e6e6e6;
+}
+
+.action{
+    color: #565656;
+    cursor: pointer;
+    padding: 10px;
+}
+
+.copyright{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    color: #565656;
+    font-size: 0.8rem;
+}
+
+#toast{
+    width: max-content;
+    position: fixed;
+    top: 0;
+}
+.toast-container{
+    background-color: #1c1c1c;
+    padding: 1rem;
+    margin-top: 2rem;
+    color: #e6e6e6;
+    border-style: dashed;
+    border-width: 1px;
+    border-color: #565656;
+    animation: muncul 300ms ease-in-out;
+}
+
+.toast-gone{
+    animation: hilang 1s ease-in-out 1s;
+}
+
+@keyframes muncul {
+    from{
+        opacity: 0;
+        transform: translateY(-4rem);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+@keyframes hilang {
+    from{
+        opacity: 1;
+    }
+    to{
+        opacity: 0;
+    }
+}
